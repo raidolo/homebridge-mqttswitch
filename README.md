@@ -32,6 +32,7 @@ Remember to configure the plugin in config.json in your home directory inside th
 	}
 + "onValue": "OPTIONALLY PUT THE VALUE THAT MEANS ON HERE (DEFAULT true)",
 + "offValue": "OPTIONALLY PUT THE VALUE THAT MEANS OFF HERE (DEFAULT false)",
++ "statusCmd": "OPTIONALLY PUT THE STATUS COMMAND HERE (DEFAULT false)",
 + "integerValue": "OPTIONALLY SET THIS TRUE TO USE 1/0 AS VALUES"
 
-Look for a sample config in [config.json example](https://github.com/ilcato/homebridge-mqttswitch/blob/master/config.json)
+Look for a sample config in [config.json example](https://github.com/raidolo/homebridge-mqttswitchPlus/blob/master/config.json)
