@@ -3,7 +3,7 @@
 // Remember to add accessory to config.json. Example:
 // "accessories": [
 //     {
-//            "accessory": "mqttswitch",
+//            "accessory": "mqttswitchplus",
 //            "name": "PUT THE NAME OF YOUR SWITCH HERE",
 //            "url": "PUT URL OF THE BROKER HERE",
 //			  "username": "PUT USERNAME OF THE BROKER HERE",
@@ -83,10 +83,8 @@ function MqttSwitchAccessory(log, config) {
 	this.client.on('message', function (topic, message) {
 		if (topic == that.topicStatusGet) {
 			var status = message.toString();
-                        // that.log('message arrived on '+that.topicStatusGet+' status '+status);
                         if (status == that.onValue || status == that.offValue) {
 			    that.switchStatus = (status == that.onValue) ? true : false;
-                        //  that.log('Status Parsed '+status);
 		   	    that.service.getCharacteristic(Characteristic.On).setValue(that.switchStatus, undefined, 'fromSetValue');
                         }
 		}
@@ -98,19 +96,17 @@ module.exports = function(homebridge) {
   	Service = homebridge.hap.Service;
   	Characteristic = homebridge.hap.Characteristic;
 
-  	homebridge.registerAccessory("homebridge-mqttswitch", "mqttswitch", MqttSwitchAccessory);
+  	homebridge.registerAccessory("homebridge-mqttswitchplus", "mqttswitchplus", MqttSwitchPlusAccessory);
 }
 
-MqttSwitchAccessory.prototype.getStatus = function(callback) {
-    // this.log('Called getStatus: status: '+this.switchStatus);
+MqttSwitchPlusAccessory.prototype.getStatus = function(callback) {
+    if (this.statusCmd !== undefined) {
     this.client.publish(this.topicStatusSet, this.statusCmd, this.publish_options);
+    }
     callback(null, this.switchStatus);
 }
 
-MqttSwitchAccessory.prototype.setStatus = function(status, callback, context) {
-	// this.log('Calling setStatus');
-	// this.log('context: '+context);
-	// this.log('status: '+status);
+MqttSwitchPlusAccessory.prototype.setStatus = function(status, callback, context) {
 	if(context !== 'fromSetValue') {
 		this.switchStatus = status;
 	    this.client.publish(this.topicStatusSet, status ? this.onValue : this.offValue, this.publish_options);
@@ -118,6 +114,6 @@ MqttSwitchAccessory.prototype.setStatus = function(status, callback, context) {
 	callback();
 }
 
-MqttSwitchAccessory.prototype.getServices = function() {
+MqttSwitchPlusAccessory.prototype.getServices = function() {
   return [this.service];
 }
