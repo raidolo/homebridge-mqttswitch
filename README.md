@@ -5,12 +5,13 @@ An homebridge plugin that create an HomeKit Switch accessory mapped on MQTT topi
 Follow the instruction in [homebridge](https://www.npmjs.com/package/homebridge) for the homebridge server installation.
 The plugin is published through [NPM](https://www.npmjs.com/package/homebridge-mqttswitchPlus) and should be installed "globally" by typing:
 
-    npm install -g homebridge-mqttswitch
+    npm install -g homebridge-mqttswitchPlus
     
-# List of changes in the Plus version
+# Release Notes
+Version 0.0.1
 + Introduced the status command to dynamically read the status of the switch
 
-# Forked by ilcato/homebridge-mqttswitch - Release notes
+# Forked by ilcato/homebridge-mqttswitch - Previous Release notes
 Version 0.0.3
 + Added onValue, offValue and integerValue params
 
