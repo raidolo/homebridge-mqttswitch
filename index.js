@@ -1,4 +1,4 @@
-// MQTT Switch Accessory plugin for HomeBridge
+// MQTT Switch Plus Accessory plugin for HomeBridge
 //
 // Remember to add accessory to config.json. Example:
 // "accessories": [
