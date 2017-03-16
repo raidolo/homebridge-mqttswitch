@@ -6,7 +6,12 @@ Follow the instruction in [homebridge](https://www.npmjs.com/package/homebridge)
 The plugin is published through [NPM](https://www.npmjs.com/package/homebridge-mqttswitchplus) and should be installed "globally" by typing:
 
     npm install -g homebridge-mqttswitchplus
-    
+
+# Instructions
+This plugin uses a status command, sent via the "set" Topic, to dinamically retrieve the status of the switch from the device. 
+The status should be sent by the device on the "get" topic, as usual. 
+You should develop the device code to accept the status command on the "set" topic and answer publishing the actual status using the "get" topic. 
+
 # Release Notes
 Version 0.0.1
 + Introduced the status command to dynamically read the status of the switch
