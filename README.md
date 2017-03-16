@@ -1,11 +1,11 @@
-# homebridge-mqttswitchPlus
+# homebridge-mqttswitchplus
 An homebridge plugin that create an HomeKit Switch accessory mapped on MQTT topics
 
 # Installation
 Follow the instruction in [homebridge](https://www.npmjs.com/package/homebridge) for the homebridge server installation.
-The plugin is published through [NPM](https://www.npmjs.com/package/homebridge-mqttswitchPlus) and should be installed "globally" by typing:
+The plugin is published through [NPM](https://www.npmjs.com/package/homebridge-mqttswitchplus) and should be installed "globally" by typing:
 
-    npm install -g homebridge-mqttswitchPlus
+    npm install -g homebridge-mqttswitchplus
     
 # Release Notes
 Version 0.0.1
@@ -35,4 +35,4 @@ Remember to configure the plugin in config.json in your home directory inside th
 + "statusCmd": "OPTIONALLY PUT THE STATUS COMMAND HERE (DEFAULT false)",
 + "integerValue": "OPTIONALLY SET THIS TRUE TO USE 1/0 AS VALUES"
 
-Look for a sample config in [config.json example](https://github.com/raidolo/homebridge-mqttswitchPlus/blob/master/config.json)
+Look for a sample config in [config.json example](https://github.com/raidolo/homebridge-mqttswitchplus/blob/master/config.json)
