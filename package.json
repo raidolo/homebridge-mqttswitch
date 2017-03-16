@@ -1,6 +1,6 @@
 {
-  "name": "homebridge-mqttswitch",
-  "version": "0.0.3",
+  "name": "homebridge-mqttswitchplus",
+  "version": "0.0.1",
   "description": "Homebridge plugin for MQTT switches",
   "note": "peerDependencies is hardcoded to peerDepdendencies in homebridge!!!",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ilcato/homebridge-mqttswitch"
+    "url": "https://github.com/raidolo/homebridge-mqttswitchplus"
   },
   "keywords": [
     "homebridge-plugin",
@@ -27,10 +27,10 @@
   "dependencies": {
     "mqtt": "^1.6.3"
   },
-  "author": "ilcato",
+  "author": "raidolo",
   "license": "GPL2",
   "bugs": {
-    "url": "https://github.com/ilcato/homebridge-mqttswitch/issues"
+    "url": "https://github.com/raidolo/homebridge-mqttswitchplus/issues"
   },
-  "homepage": "https://github.com/ilcato/homebridge-mqttswitch"
+  "homepage": "https://github.com/raidolo/homebridge-mqttswitchplus"
 }
